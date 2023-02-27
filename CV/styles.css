@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+ 
+:root{
+    --skills-bar-length:0%;
+}
+
+html, body{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    background:#7A59BD ;
+    cursor: default;
+    font-family: "Tilt Neon", sans-serif;
+    font-size: 16px;    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition-duration: 0,3s;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+h3{
+    color: grey;
+    margin: 10px;
+    font-size: 1.25em;
+}
+
+.curriculum{
+    width: 960px;
+    background-color: #d4c7fa;
+    color:white;
+    margin: 20px auto;
+    box-shadow: 10px 10px black;
+    position:relative;
+    display: flex;
+}
+
+.curriculum .base,
+.curriculum .func {
+  box-sizing: border-box;
+  float: left;
+}
+
+.curriculum .base > div:last-of-type,
+.curriculum .func > div:last-of-type{
+    padding-bottom: 0;
+}
+
+.curriculum .base > div,
+.curriculum .func > div{
+    padding-bottom: 10px;
+}
+
+.curriculum .base{
+    width: 30%;
+    padding: 30px 15px;
+}
+
+.curriculum .base .perfil .foto img{
+    border-radius: 500px;
+}
+
+.curriculum .base .perfil .foto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+img.redimension{
+    width: 50%;
+    height: 50%;
+}
+
+.curriculum .base .perfil{
+    padding: 30px 15px 40px 15px;
+    margin: -30px -15px -40px -15px;
+    position: relative;
+    z-index:2;
+}
+
+.curriculum .base .perfil .info{
+    text-align: center;
+    color: gray;
+}
+
+.curriculum .base .perfil .info .nombre{
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.75em;
+    color: gray;
+}
+
+.curriculum .base .contact div {
+    line-height: 24px;
+}
+
+.curriculum .base .yo div {
+    line-height: 24px;
+}
+
+.curriculum .base .contact div a:hover span::after {
+    width: 100%;
+}
+
+.curriculum .base .seguime .caja{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.curriculum .base .seguime .caja a{
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.curriculum .base .seguime .caja i{
+    display: inline-block;
+    font-size: 30px;
+    background: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    color: white;
+    margin: 0 10px 10px 10px;
+    transition-duration: 0.3s;
+    box-shadow:0 3px 5px 0px gray;
+}
+
+.curriculum .base .seguime .caja i.fa::before {
+    display: block;
+}
+
+.curriculum .base .seguime .caja:hover a{
+    filter: blur(2px);
+    transition: 0.4s;
+}
+
+.curriculum .base .seguime .caja a:hover{
+    transform: translateY(-3px) scale(1.05);
+    filter: none;
+}
+
+.curriculum .func{
+    width: 70%;
+    padding: 30px;
+}
+
+.curriculum .func .trabajo,
+.curriculum .func .estudios{
+    float: left;
+}
+
+.curriculum .func .trabajo small,
+.curriculum .func .estudios small{
+    display: block;
+    opacity: 0.7;
+}
+
+.curriculum .func .trabajo ul li,
+.curriculum .func .estudios ul li{
+    position: relative;
+    margin-left: 15px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+
+.curriculum .func .trabajo ul li:hover::before,
+.curriculum .func .estudios ul li:hover::before{
+    animation: circle 1.2s infinite;
+}
+
+.curriculum .func .trabajo ul li:hover span,
+.curriculum .func .estudios ul li:hover span{
+    color: black;
+}
+
+@keyframes circle{
+    from{
+        box-shadow: 0 0 0 0px black;
+    }
+    to{
+        box-shadow: 0 0 0 6px #d4c7fa;
+    }
+}
+
+.curriculum .func .trabajo ul li:first-of-type::before,
+.curriculum .func .estudios ul li:first-of-type::before {
+  width: 10px;
+  height: 10px;
+  left: 1px;
+}
+
+.curriculum .func .trabajo ul li:first-of-type::after,
+.curriculum .func .estudios ul li:first-of-type::after{
+    border-radius: 1.5px;
+}
+
+.curriculum .func .trabajo ul li:last-of-type,
+.curriculum .func .estudios ul li:last-of-type{
+    padding-bottom:3px;
+}
+
+.curriculum .func .trabajo ul li::before,
+.curriculum .func .trabajo ul li::after,
+.curriculum .func .estudios ul li::before,
+.curriculum .func .estudios ul li::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.curriculum .func .trabajo ul li::before,
+.curriculum .func .estudios ul li::before {
+  width: 7px;
+  height: 7px;
+  border: 3px solid black;
+  background: violet;
+  border-radius: 50%;
+  left: 3px;
+  z-index: 1;
+}
+
+.curriculum .func .programacion {
+  clear: both;
+  background: rgb(213, 187, 255);
+  padding: 15px;
+  box-shadow:0 3px 5px 0px gray;
+}
+.curriculum .func .programacion ul {
+  margin-left: 15px;
+}
+.curriculum .func .programacion ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  transition-duration: 0.3s;
+}
+
+.curriculum .func .programacion .bar,
+.curriculum .func .programacion .bar .skills_bar::after{
+    width: 350px;
+    height: 10px;
+    background-color: gray;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.curriculum .func .programacion ul li span{
+    display: block;
+    width: 150px;
+}
+
+.curriculum .func .programacion{
+    font-size: 20px;
+}
+
+.curriculum .func .programacion .bar::after{
+    content: "";
+    position: absolute;
+    background-color: blue;
+}
