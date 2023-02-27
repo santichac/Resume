@@ -9,7 +9,12 @@
 }
  
 :root{
-    --skills-bar-length:0%;
+    --fill-size:0%;
+    --bar-color: rgb(110, 31, 110);
+    --fill-80:80%;
+    --fill-75:75%;
+    --fill-60:60%;
+    --fill-35:35%;
 }
 
 html, body{
@@ -20,7 +25,7 @@ html, body{
     padding: 0;
     -webkit-transition: 0.5s;
     transition: 0.5s;
-    background:#7A59BD ;
+    background: grey;
     cursor: default;
     font-family: "Tilt Neon", sans-serif;
     font-size: 16px;    
@@ -28,7 +33,7 @@ html, body{
 
 a{
     text-decoration: none;
-    color: white;
+    color: black;
     display: block;
     transition-duration: 0,3s;
 }
@@ -39,19 +44,20 @@ ul{
 }
 
 h3{
-    color: grey;
+    color: black;
     margin: 10px;
     font-size: 1.25em;
 }
 
 .curriculum{
     width: 960px;
-    background-color: #d4c7fa;
-    color:white;
+    background-color: rgb(213, 187, 255);
+    color:rgb(32, 32, 32);
     margin: 20px auto;
     box-shadow: 10px 10px black;
     position:relative;
     display: flex;
+    font-size: large;
 }
 
 .curriculum .base,
@@ -73,6 +79,7 @@ h3{
 .curriculum .base{
     width: 30%;
     padding: 30px 15px;
+    background: #dbd1fc;
 }
 
 .curriculum .base .perfil .foto img{
@@ -107,7 +114,9 @@ img.redimension{
     margin-top: 10px;
     margin-bottom: 0;
     font-size: 1.75em;
-    color: gray;
+    color: black;
+    font-size: 30px;
+    padding-bottom: 20px;
 }
 
 .curriculum .base .contact div {
@@ -116,10 +125,13 @@ img.redimension{
 
 .curriculum .base .yo div {
     line-height: 24px;
+    padding-top: 60px;
 }
 
-.curriculum .base .contact div a:hover span::after {
+.curriculum .base .contact div a:hover span {
     width: 100%;
+    color: red;
+    transition-duration: 0.2s;
 }
 
 .curriculum .base .seguime .caja{
@@ -234,48 +246,194 @@ img.redimension{
   width: 7px;
   height: 7px;
   border: 3px solid black;
-  background: violet;
+  background: white;
   border-radius: 50%;
   left: 3px;
   z-index: 1;
 }
 
+.curriculum .func .estudios{
+    width: 48%;
+    background: #d4c7fa;
+    padding: 15px;
+    margin: 0 4% 15px 0;
+    box-shadow: 0 3px 5px 0px gray;
+}
+
+.curriculum .func .estudios:hover h3{
+    transform: translateX(2cm);
+    transition: 1s;
+}
+
+.curriculum .func .trabajo{
+    width: 48%;
+    background: #d4c7fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 5px 0px gray;
+}
+
+.curriculum .func .trabajo:hover h3{
+    transform: translateX(1.8cm);
+    transition: 1s;
+}
+
 .curriculum .func .programacion {
   clear: both;
-  background: rgb(213, 187, 255);
+  background: #d4c7fa;
   padding: 15px;
   box-shadow:0 3px 5px 0px gray;
 }
+
 .curriculum .func .programacion ul {
   margin-left: 15px;
 }
+
 .curriculum .func .programacion ul li {
   margin-bottom: 8px;
   display: flex;
   align-items: center;
   transition-duration: 0.3s;
+  color: gray;
 }
 
-.curriculum .func .programacion .bar,
-.curriculum .func .programacion .bar .skills_bar::after{
-    width: 350px;
-    height: 10px;
-    background-color: gray;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.curriculum .func .programacion ul li span{
+.curriculum .func .programacion ul li:hover span{
     display: block;
     width: 150px;
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    color: black;
 }
 
 .curriculum .func .programacion{
     font-size: 20px;
 }
 
-.curriculum .func .programacion .bar::after{
+.curriculum .func .programacion:hover h3{
+    transform: translateX(3cm);
+    transition: 1s;
+}
+
+.curriculum .func .programacion .bar{
+    position: absolute;
+    width: 300px;
+    height: 10px;
+    background-color: var(--bar-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 3.5cm;
+}
+
+.curriculum .func .programacion .bar .barra-80::before{
     content: "";
     position: absolute;
-    background-color: blue;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    transform: translateX(0%);
+    animation: fill-bar-80 0.8s 0.3s ease-in-out forwards;
+}
+
+@keyframes fill-bar-80{
+    to{
+        transform: translateX(var(--fill-80));
+    }
+}
+
+.curriculum .func .programacion .bar .barra-75::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    transform: translateX(0%);
+    animation: fill-bar-75 0.8s 0.3s ease-in-out forwards;
+}
+
+@keyframes fill-bar-75{
+    to{
+        transform: translateX(var(--fill-75));
+    }
+}
+
+.curriculum .func .programacion .bar .barra-60::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    transform: translateX(0%);
+    animation: fill-bar-60 0.8s 0.3s ease-in-out forwards;
+}
+
+@keyframes fill-bar-60{
+    to{
+        transform: translateX(var(--fill-60));
+    }
+}
+
+.curriculum .func .programacion .bar .barra-35::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    transform: translateX(0%);
+    animation: fill-bar-35 0.8s 0.3s ease-in-out forwards;
+}
+
+@keyframes fill-bar-35{
+    to{
+        transform: translateX(var(--fill-35));
+    }
+}
+
+.curriculum .func .intereses{
+    height: 20%;
+    width: 100%;
+    background: #d4c7fa;
+    padding: 15px;
+    margin: 0 4% 15px 0;
+    box-shadow: 0 3px 5px 0px gray;
+}    
+
+.curriculum .func .intereses .items {
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.curriculum .func .intereses i{
+    font-size: 30px;
+    display: inline-block;
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    line-height: 50px;
+    color:white;
+    margin: 0 10px 10px 10px;
+    transition-duration: 0.3s;
+    box-shadow:0 3px 5px 0px gray;
+    border: 5px solid black;
+}
+
+.curriculum .func .intereses .items div:hover i{
+    transform: scale(1.2);
+}
+
+.curriculum .func .intereses .items span{
+    color: grey;
+    font-size: small;
+}
+
+.curriculum .func .intereses .items div:hover span{
+    color: black;
+    font-size: large;
+    transition-duration: 0.3s;
+}
+
+.curriculum .func .intereses:hover h3{
+    transform: translateX(6cm);
+    transition: 1s;
 }
