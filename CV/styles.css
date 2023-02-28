@@ -305,6 +305,12 @@ img.redimension{
     color: black;
 }
 
+.curriculum .func .programacion a{
+    display: flex;
+    margin-left: 120px;
+    position: absolute;
+}
+
 .curriculum .func .programacion{
     font-size: 20px;
 }
@@ -321,7 +327,12 @@ img.redimension{
     background-color: var(--bar-color);
     border-radius: 10px;
     overflow: hidden;
-    margin-left: 3.5cm;
+    margin-left: 5cm;
+}
+
+.curriculum .func .programacion .bar div:hover li{
+    transform: scale(1.2);
+    transition: 0.3s;
 }
 
 .curriculum .func .programacion .bar .barra-80::before{
@@ -436,4 +447,48 @@ img.redimension{
 .curriculum .func .intereses:hover h3{
     transform: translateX(6cm);
     transition: 1s;
+}
+
+.boton-negro{
+    position: absolute;
+    margin-left: 317px;
+    margin-top: 315px;
+}
+
+.boton-negro button{
+    width: 40px;
+    height: 40px;
+    background-color: #d4c7fa;
+    box-shadow: 0 3px 5px 0px gray;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.boton-negro:hover button{
+    transform: scale(1.2);
+    transition: 0.3s;
+    rotate: 10deg;
+}
+
+.boton-blanco{
+    position: absolute;
+    margin-left: 317px;
+    margin-top: 370px;
+}
+
+.boton-blanco button{
+    width: 40px;
+    height: 40px;
+    background-color: #d4c7fa;
+    box-shadow: 0 3px 5px 0px gray;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.boton-blanco:hover button{
+    transform: scale(1.2);
+    transition: 0.3s;
+    rotate: 10deg;
 }

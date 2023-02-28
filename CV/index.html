@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Comatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.3.0/css/all.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <title>CV</title> 
-    <link rel="stylesheet" type="text/css" href="styles.css" />      
+    <link rel="stylesheet" type="text/css" href="styles.css" />     
 </head>
 <body> 
-    <script src="function.js"></script>
     <div class="curriculum">
+        <div class="boton-negro">
+            <button type="button" id="oscuro"><i class="fas fa-moon"></i></button>
+        </div>
+        <div class="boton-blanco">
+            <button type="button" id="claro"><i class="fas fa-sun"></i></button>
+        </div>
         <div class="base">
             <div class="perfil">
                 <div class="foto">
@@ -23,8 +27,8 @@
             </div>
             <div class="yo">
                 <h3>Sobre mi</h3> Soy una persona comprometida, 
-                ambiciosa y aprendo rapido. Me gusta trabajar 
-                tanto en equipo como individual.
+                ambiciosa y aprendo rapido. Me desenvuelvo comodamente
+                tanto en actividades grupales como en el trabajo individual.
             </div>
             <div class="contact">
                 <h3>Contacto</h3>
@@ -93,7 +97,7 @@
                         <span>Volutariado Escape <br>Isla Huemul </span><small>Club los Pehuenes </small><small>Ene. 2022</small>
                     </li>
                     <li>
-                        <span>Voluntariado Iron Man <br>73.9 </span><small>Club los Pehuenes </small><small>Ene. 2019</small>
+                        <span>Voluntariado Iron Man <br>70.3 </span><small>Club los Pehuenes </small><small>Ene. 2019</small>
                     </li>
                 </ul>
            </div>
@@ -102,36 +106,42 @@
                 <ul>
                     <li data-percent="80">
                         <span>HTML5</span>
+                        <a>80%</a>
                         <div class="bar">
                             <div class="barra-80"></div>
                         </div>
                     </li>
                     <li data-percent="75">
                         <span>CSS3</span>
+                        <a>75%</a>
                         <div class="bar">
                             <div class="barra-75"></div>
                         </div>
                     </li>
                     <li data-percent="60">
                         <span>JavaScript</span>
+                        <a>60%</a>
                         <div class="bar">
                             <div class="barra-60"></div>
                         </div>
                     </li>
                     <li data-percent="35">
                         <span>JSON</span>
+                        <a>35%</a>
                         <div class="bar">
                             <div class="barra-35"></div>
                         </div>
                     </li>
                     <li data-percent="80">
                         <span>Python</span>
+                        <a>80%</a>
                         <div class="bar">
                             <div class="barra-80"></div>
                         </div>
                     </li>
                     <li data-percent="80">
                         <span>C</span>
+                        <a>80%</a>
                         <div class="bar">
                             <div class="barra-80"></div>
                         </div>
@@ -172,5 +182,6 @@
            </div>
         </div>
     </div>
+    <script src="function.js"></script> 
 </body>
 </html>
